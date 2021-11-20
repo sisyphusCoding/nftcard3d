@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap')
+
+$navy:   #17182b
+$navy-1: #222540
+
+
+
+body 
+    font-family: 'Raleway', sans-serif
+    display: grid
+    place-items: center
+    min-height: 100vh
+    background: $navy
+    box-sizing: border-box
+    > * 
+        background: $navy-1
+
+
+@mixin debug 
+    border: 0px dashed white
+
+@mixin shadow
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5)
+
+
+@mixin color-light
+     color: #396EB0
+    
+
+.frame 
+    height: 525px
+    width: 320px
+    @include debug
+    border-radius: 20px
+    @include shadow
+    display: grid
+    place-items: center
+    color: white
+    grid-template-areas: 2fr 1fr 1fr
+
+    > * 
+        border-radius: 15px 
+        @include debug
+   
+
+    .top
+        height: 280px
+        width: 280px
+        background-image: url("images/image-equilibrium.jpg") 
+        background-repeat: no-repeat 
+        background-size: cover
+        margin-top: 20px;
+        .overlay
+            border-radius: 15px 
+            height: 100%
+            width: 100%
+            background: rgba(255,255,255,0.5)
+            opacity: 0
+            display: grid
+            place-items: center
+            transition: 0.5s ease-in-out
+        &:focus , &:hover .overlay
+            opacity: 1
+            
+            transition: 0.5s ease-in-out
+            cursor: pointer
+            
+            
+
+
+    .end
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        width: 280px
+        height: fit-content
+        margin-top: -10px
+        margin-bottom: 30px;
+
+
+        .creation
+            margin-right: 5px
+            opacity: 0.7
+        .author
+            transition: 0.5s ease-in-out
+            &:hover
+                opacity: 0.7
+                transition: 0.5s ease-in-out
+                cursor: pointer
+    
+        .profile
+            height: 30px
+            width: 30px
+            margin-right: 20px
+        > * 
+            display: flex
+
+    .bottom
+        height: 180px
+        width: 280px
+    
+        .head
+            font-weight: bolder
+            transition: 0.5s ease-in-out
+            &:hover
+                opacity: 0.7
+                transition: 0.5s ease-in-out
+                cursor: pointer
+        
+        .light
+            opacity: 0.7
+    
+        .wrapper
+            display: flex
+            @include debug
+            height: fit-content
+            align-items: center
+            justify-content: space-between
+        
+            > * 
+                 display: flex
+                 @include debug
+                 height: fit-content
+                 width: fit-content
+                 font-size: 15px
+                 align-items: center
+        .logo-1
+            height: fit-content
+            @include debug
+            width: fit-content
+            margin-top: 3px
+            margin-right: 5px
+            img
+                width: 100%
+                height: 100%
+        .logo-2
+            @extend .logo-1
+            margin-top: 5px
+        .i-t-one
+            opacity: 0.9
+        .i-t-two
+            opacity: 0.7
+
+        .eth
+            width: 8%
+
+        .clock
+            width: 10%
+  
+        hr
+            height: 0px
+            border: 1px solid #396EB0
+            background: #396EB0
+            margin-top: 20px
+            border-radius: 10px
+
+           
