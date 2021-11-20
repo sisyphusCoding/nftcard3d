@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap");
+body {
+  font-family: 'Raleway', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #17182b;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body > * {
+  background: #222540;
+}
+
+.frame {
+  height: 525px;
+  width: 320px;
+  border: 0px dashed white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: white;
+      grid-template-areas: 2fr 1fr 1fr;
+}
+
+.frame > * {
+  border-radius: 15px;
+  border: 0px dashed white;
+}
+
+.frame .top {
+  height: 280px;
+  width: 280px;
+  background-image: url("images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+}
+
+.frame .top .overlay {
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.frame .top:focus, .frame .top:hover .overlay {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.frame .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 280px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.frame .end .creation {
+  margin-right: 5px;
+  opacity: 0.7;
+}
+
+.frame .end .author {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.frame .end .author:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.frame .end .profile {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.frame .end > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.frame .bottom {
+  height: 180px;
+  width: 280px;
+}
+
+.frame .bottom .head {
+  font-weight: bolder;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.frame .bottom .head:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.frame .bottom .light {
+  opacity: 0.7;
+}
+
+.frame .bottom .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0px dashed white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.frame .bottom .wrapper > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0px dashed white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.frame .bottom .logo-1, .frame .bottom .logo-2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 0px dashed white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.frame .bottom .logo-1 img, .frame .bottom .logo-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.frame .bottom .logo-2 {
+  margin-top: 5px;
+}
+
+.frame .bottom .i-t-one {
+  opacity: 0.9;
+}
+
+.frame .bottom .i-t-two {
+  opacity: 0.7;
+}
+
+.frame .bottom .eth {
+  width: 8%;
+}
+
+.frame .bottom .clock {
+  width: 10%;
+}
+
+.frame .bottom hr {
+  height: 0px;
+  border: 1px solid #396EB0;
+  background: #396EB0;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */
