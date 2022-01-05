@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500&display=swap')
+
+
+body 
+	background: #0e103d
+	display: flex
+	justify-content: center
+	align-items: center
+	min-height: 100vh
+	
+*
+	box-sizing: border-box
+	font-family: 'Montserrat Alternates', sans-serif
+
+h2
+	color: #d6d6d6
+	font-size: 2.4vh
+	font-weight: normal
+h4
+	color: #98BAE7
+	font-weight: normal
+	font-size: 1.3vh
+	
+i
+	font-size: 1.5vh
+	
+span
+	color: #98BAE7
+
+@mixin neo 
+	border-radius: 5px
+	background: #0e103d
+	box-shadow:  5px 5px 14px #0a0b2b, -5px -5px 14px #12154f
+
+[id*="app"] 
+	@include neo
+	height: 60vh
+	width: 50vh
+	overflow: hidden
+	display: grid
+	place-items: center
+	perspective: 2000px
+	.flip
+		transform: rotateY(180deg)
+	.card
+		height: 48vh
+		cursor: pointer
+		width: 32vh
+		position: relative
+		background: #2D1651
+		border-radius: 1vh
+		transform-style: preserve-3d
+		transition: all 800ms ease-in-out
+		> *
+			transform-style: preserve-3d
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
+			position: absolute
+			width: 26vh
+			height: 44vh
+			border-radius: 1vh
+			left: 3vh
+			top: 2vh
+			display: flex
+			align-items: center
+			flex-direction: column	
+		.front
+			justify-content: space-between
+			transform: rotateY(0) translate3d(0,0,1vh)
+			> *
+				transform-style: preserve-3d
+				transform: translate3d(0,0,5vh)
+			.image
+				background: url('https://i.ibb.co/gmkfJnh/image-equilibrium.jpg') , rgba(255,255,255,0.5)
+				background-size: 100% 100%
+				background-repeat: no-repeat
+				box-shadow: 0 5px 8px #261244
+				border-radius: .5vh
+				height: 70%
+				width: 105%
+				transition: all 300ms ease
+				overflow: hidden
+				display: grid
+				place-items: center
+				.overlay
+					position: absolute
+					border-radius: .5vh
+					height: 29vh
+					width: 27vh
+					transition: all 300ms ease
+					background: rgba(255,255,255,0)
+				i
+					opacity: 0
+					font-size: 3vh
+					color: #d6d6d6
+					transition: all 300ms ease
+				&:hover
+					.overlay
+						background: rgba(255,255,255,0.4)
+					i
+						opacity: 1
+						z-index: 100
+			.details
+			.wrap
+				display: flex
+				flex-direction: row
+				height: 3vh
+				width: inherit
+				align-items: center
+				justify-content: space-between
+				span
+					.ic
+							font-size: 1.4vh
+							align-items: center
+							line-height: 2vh
+							margin-left: 1vh
+		.back
+			justify-content: center
+			transform: rotateY(180deg) translate3d(0,0,1vh)
+			> *
+				transform-style: preserve-3d
+				transform: translate3d(0,0,5vh)
+			.profile
+				background-image: url('https://st2.depositphotos.com/1009634/7235/v/950/depositphotos_72350117-stock-illustration-no-user-profile-picture-hand.jpg')
+				border-radius: 50%
+				background-size: 100% 100%
+				background-repeat: no-repeat
+				height: 20vh
+				width: 20vh
+			span
+				margin-top: 4vh
+				font-size: 2vh
+				span
+					margin-left: 1vh
+					color: #d6d6d6
+					transition: all 300ms ease
+					&:hover
+						opacity: 0.8
+						color: #98BAE7
+						
+						
+
+
+	
+	

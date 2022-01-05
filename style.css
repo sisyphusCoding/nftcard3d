@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500&display=swap");
+body {
+  background: #0e103d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h2 {
+  color: #d6d6d6;
+  font-size: 2.4vh;
+  font-weight: normal;
+}
+
+h4 {
+  color: #98BAE7;
+  font-weight: normal;
+  font-size: 1.3vh;
+}
+
+i {
+  font-size: 1.5vh;
+}
+
+span {
+  color: #98BAE7;
+}
+
+[id*="app"] {
+  border-radius: 5px;
+  background: #0e103d;
+  -webkit-box-shadow: 5px 5px 14px #0a0b2b, -5px -5px 14px #12154f;
+          box-shadow: 5px 5px 14px #0a0b2b, -5px -5px 14px #12154f;
+  height: 60vh;
+  width: 50vh;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+[id*="app"] .flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+[id*="app"] .card {
+  height: 48vh;
+  cursor: pointer;
+  width: 32vh;
+  position: relative;
+  background: #2D1651;
+  border-radius: 1vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+}
+
+[id*="app"] .card > * {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 26vh;
+  height: 44vh;
+  border-radius: 1vh;
+  left: 3vh;
+  top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+[id*="app"] .card .front {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: rotateY(0) translate3d(0, 0, 1vh);
+          transform: rotateY(0) translate3d(0, 0, 1vh);
+}
+
+[id*="app"] .card .front > * {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 5vh);
+          transform: translate3d(0, 0, 5vh);
+}
+
+[id*="app"] .card .front .image {
+  background: url("https://i.ibb.co/gmkfJnh/image-equilibrium.jpg"), rgba(255, 255, 255, 0.5);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 5px 8px #261244;
+          box-shadow: 0 5px 8px #261244;
+  border-radius: .5vh;
+  height: 70%;
+  width: 105%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+[id*="app"] .card .front .image .overlay {
+  position: absolute;
+  border-radius: .5vh;
+  height: 29vh;
+  width: 27vh;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  background: rgba(255, 255, 255, 0);
+}
+
+[id*="app"] .card .front .image i {
+  opacity: 0;
+  font-size: 3vh;
+  color: #d6d6d6;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+[id*="app"] .card .front .image:hover .overlay {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+[id*="app"] .card .front .image:hover i {
+  opacity: 1;
+  z-index: 100;
+}
+
+[id*="app"] .card .front .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 3vh;
+  width: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+[id*="app"] .card .front .wrap span .ic {
+  font-size: 1.4vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2vh;
+  margin-left: 1vh;
+}
+
+[id*="app"] .card .back {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, 1vh);
+          transform: rotateY(180deg) translate3d(0, 0, 1vh);
+}
+
+[id*="app"] .card .back > * {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 5vh);
+          transform: translate3d(0, 0, 5vh);
+}
+
+[id*="app"] .card .back .profile {
+  background-image: url("https://st2.depositphotos.com/1009634/7235/v/950/depositphotos_72350117-stock-illustration-no-user-profile-picture-hand.jpg");
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 20vh;
+  width: 20vh;
+}
+
+[id*="app"] .card .back span {
+  margin-top: 4vh;
+  font-size: 2vh;
+}
+
+[id*="app"] .card .back span span {
+  margin-left: 1vh;
+  color: #d6d6d6;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+[id*="app"] .card .back span span:hover {
+  opacity: 0.8;
+  color: #98BAE7;
+}
+/*# sourceMappingURL=style.css.map */
