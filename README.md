@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://sisyphuscoding.github.io/nftCard3D)
+- Live Site URL: [github live site](https://sisyphuscoding.github.io/nftCard3D)
 
 ## My process
 
