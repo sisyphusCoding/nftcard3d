@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [github live site](https://sisyphuscoding.github.io/nftCard3D)
+- Solution URL: [codepen link](https://codepen.io/coding_anish/pen/KKXeVbg)
+- Live Site URL: [github live site](https://3d-nftcard.netlify.app)
 
 ## My process
 
