@@ -28,7 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](url:'https://i.ibb.co/fG8pV0c/Facebook-post-1.jpg')
+
+<img src="https://i.ibb.co/fG8pV0c/Facebook-post-1.jpg"
+     alt="Nft 3d Card" />
 
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
